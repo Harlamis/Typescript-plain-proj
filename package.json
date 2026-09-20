@@ -3,8 +3,9 @@
   "version": "1.0.0",
   "private": true,
   "scripts": {
-    "dev": "webpack serve --mode development --open",
-    "build": "webpack --mode production",
+    "dev": "vite --host 0.0.0.0 --port 9000",
+    "build": "vite build",
+    "preview": "vite preview --host 0.0.0.0 --port 4173",
     "lint": "eslint . --ext .ts",
     "format": "prettier --write .",
     "test": "mocha -r ts-node/register tests/**/*.test.ts"
@@ -15,6 +16,7 @@
     "@types/node": "^22.10.2",
     "@typescript-eslint/eslint-plugin": "^8.57.0",
     "@typescript-eslint/parser": "^8.57.0",
+    "@vitejs/plugin-basic-ssl": "^2.3.0",
     "autoprefixer": "^10.4.20",
     "chai": "^4.2.0",
     "css-loader": "^7.1.0",
@@ -31,6 +33,7 @@
     "ts-loader": "^9.1.2",
     "ts-node": "^10.9.2",
     "typescript": "^5.6.3",
+    "vite": "^8.3.0",
     "webpack": "^5.97.1",
     "webpack-cli": "^5.1.4",
     "webpack-dev-server": "^5.0.0"
